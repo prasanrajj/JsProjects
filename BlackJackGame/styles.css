@@ -1,0 +1,44 @@
+body{
+    background-color: #0b6623;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.box{
+    margin-top: 80px;
+    border: dotted 2px gold;
+}
+
+#startBtn, #newCardBtn{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+#startBtn{
+    background-color: #007bff;
+    color: white;
+}
+#newCardBtn{
+    background-color: #28a745;
+    color: white;
+}
+
+#startBtn:hover, #newCardBtn:hover {
+  background-color: red;
+  color: yellow;
+  transform: scale(1.1);
+  opacity: 0.9;
+  transition-duration: 3s;
+  transition-timing-function: ease;
+  transition-delay: 0.2s;
+
+
+}
