@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+
+        <button id="btn">Show Students</button>
+        <ul id="list"></ul>
+
+        <script>
+            let students = [
+                { name: "Rahul", age: 21, course: "JS" },
+                { name: "Anita", age: 22, course: "React" },
+                { name: "Kiran", age: 20, course: "Node" }
+            ];
+
+            document.getElementById("btn").onclick = function () {
+                let output = "";
+
+                for (let i = 0; i < students.length; i++) {
+                    output =
+                        output +
+                        "<li>" +
+                        students[i].name + " - " +
+                        students[i].course + " - " + students[i].age +
+                        "</li>";
+                }
+
+                document.getElementById("list").innerHTML = output;
+            };
+        </script>
+
+    </body>
+
+    </html>

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<button id="btn">Show Student</button>
-<p id="output"></p>
+    <button id="btn">Show Student</button>
+    <p id="output"></p>
+    <script>
+        let student = {
+            name: "Rahul",
+            age: 21,
+            course: "JavaScript",
+            passed: true
+        };
 
-<script>
-  let student = {
-    name: "Rahul",
-    age: 21,
-    course: "JavaScript",
-    passed: true
-  };
+        document.getElementById("btn").onclick = function () {
+            let text =
+                "Name: " + student.name + "<br>" +
+                "Age: " + student.age + "<br>" +
+                "Course: " + student.course + "<br>" +
+                "Passed: " + student.passed;
 
-  document.getElementById("btn").onclick = function () {
-    let text =
-      "Name: " + student.name + "<br>" +
-      "Age: " + student.age + "<br>" +
-      "Course: " + student.course + "<br>" +
-      "Passed: " + student.passed;
-
-    document.getElementById("output").innerHTML = text;
-  };
-</script>
-
+            document.getElementById("output").innerHTML = text;
+        };
+    </script>
 </body>
+
 </html>
