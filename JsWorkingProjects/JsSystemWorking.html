@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS System Start</title>
+</head>
+
+<body>
+    <H1 id="text">0</H1>
+    <button id="btn" style="cursor: pointer">increment</button>
+
+    <script>
+        let count = 0;
+        document.getElementById("btn").onclick = function () {//event noted
+            count = count + 1;//state change
+            document.getElementById("text").innerText = count//UI update
+        };
+    </script>
+</body>
+
+</html>

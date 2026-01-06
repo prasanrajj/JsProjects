@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" 
+    style="width:100px; height:200px; cursor:pointer;"
+        alt="Bulb"><br>
+
+    <button id="btn">On/Off switch🔋</button>
+
+    <script>
+        let isOn = false;
+        document.getElementById("btn").onclick = function () {
+            isOn = !isOn; // Toggle state
+            if (isOn) {
+                document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulboff.gif"; 
+                // Update UI to 'on' image
+            } else {
+                document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulbon.gif"; 
+                // Update UI to 'off' image
+            }
+        };
+    </script>
+</body>
+
+</html>
