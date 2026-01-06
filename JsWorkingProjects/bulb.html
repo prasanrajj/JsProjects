@@ -17,7 +17,7 @@
 
     <script>
         let isOn = false;
-        document.getElementById("btn").onclick = function () {
+        function toggleBulb () {
             isOn = !isOn; // Toggle state
             if (isOn) {
                 document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulboff.gif"; 
@@ -27,6 +27,8 @@
                 // Update UI to 'off' image
             }
         };
+
+        document.getElementById("btn").onclick = toggleBulb;
     </script>
 </body>
 

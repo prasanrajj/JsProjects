@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Show Tasks</button>
+<ul id="list"></ul>
+
+<script>
+  let tasks = ["Study JS", "Practice Loops", "Build Mini Project"];
+
+  document.getElementById("btn").onclick = function () {
+    let output = "";
+
+    for (let i = 0; i < tasks.length; i++) {
+      output = output + "<li>" + tasks[i] + "</li>";
+    }
+
+    document.getElementById("list").innerHTML = output;
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="data"></p>
+
+<button id="btn1">Show Even Numbers</button>
+<p id="evenOutput"></p>
+
+<button id="btn2">Show odd Numbers</button>
+<p id="oddOutput"></p>
+
+<script>
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  document.getElementById("data").innerText = numbers.join(", ");
+
+  document.getElementById("btn1").onclick = eventNumbers;
+  document.getElementById("btn2").onclick = oddNumbers;
+
+  function eventNumbers() {
+    let result = "";
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 === 0) {
+        result = result + numbers[i] + " ";
+      }
+    }
+
+    document.getElementById("evenOutput").innerText = result;
+  };
+  function oddNumbers() {
+    let result = "";
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 !== 0) {
+        result = result + numbers[i] + " ";
+      }
+    }
+
+    document.getElementById("oddOutput").innerText = result;
+  };
+</script>
+
+</body>
+</html>
