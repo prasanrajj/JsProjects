@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="taskInput" placeholder="Enter task">
+<button id="btn">Add Task</button>
+
+<ul id="list"></ul>
+
+<script>
+  let tasks = [];
+
+  document.getElementById("btn").onclick = function () {
+    let value = document.getElementById("taskInput").value;
+
+    tasks.push(value);
+
+    let output = "";
+    for (let i = 0; i < tasks.length; i++) {
+      output = output + "<li>" + tasks[i] + "</li>";
+    }
+
+    document.getElementById("list").innerHTML = output;
+    
+    //reset input field after adding task
+    document.getElementById("taskInput").value = "";
+  };
+</script>
+
+</body>
+</html>
