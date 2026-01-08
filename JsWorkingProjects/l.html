@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head><title>onkeyup Live event-driven UI</title></head>
+<body>
+
+<input id="nameInput" placeholder="Type something">
+<p id="output"></p>
+
+<script>
+  document.getElementById("nameInput").onkeyup = function () {
+    let value = document.getElementById("nameInput").value;
+    document.getElementById("output").innerText = value;
+  };
+</script>
+
+</body>
+</html>
