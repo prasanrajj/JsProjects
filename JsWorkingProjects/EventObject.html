@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <input id="inputBox" placeholder="Type here">
+    <p id="output"></p>
+
+
+
+    <script>
+        let array = [];
+        document.getElementById("inputBox").onkeyup = function (event) {
+            let key = event.key;
+            let value = event.target.value;
+            let text = "Key pressed:    " + key + "  | Value:    " + value;
+            array.push(text);
+            document.getElementById("output").innerText = array.join("\n");
+        };
+    </script>
+
+</body>
+
+</html>
