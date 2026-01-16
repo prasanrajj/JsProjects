@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm">
+  <input id="nameInput" placeholder="Enter name">
+  <button>Submit</button>
+</form>
+
+<p id="output"></p>
+
+<script>
+  document.getElementById("myForm").onsubmit = function (event) {
+
+    //preventing default form submission behavior
+    event.preventDefault();
+
+    //getting value from input field
+    let value = event.target.nameInput.value;
+
+    //assigning value to output paragraph
+    document.getElementById("output").innerText = value;
+
+    //resetting the input field placeholder
+    event.target.nameInput.value = "Enter name ";
+  };
+</script>
+
+</body>
+</html>
