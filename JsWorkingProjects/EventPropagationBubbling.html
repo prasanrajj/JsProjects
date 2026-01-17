@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="box" style="padding:20px; border:2px solid black;">
+        Parent DIV ✅ bubbling
+        <button id="btn">Click Me</button>
+    </div>
+
+    <script>
+        document.getElementById("btn").onclick = function () {
+            event.stopPropagation();
+            console.log("button clicked");
+        };
+
+        document.getElementById("box").onclick = function () {
+            console.log("div clicked");
+        };
+
+        document.body.onclick = function () {
+            console.log("body clicked");
+        };
+
+        document.documentElement.onclick = function () {
+            console.log("html clicked");
+        };
+
+        
+    </script>
+
+</body>
+
+</html>
