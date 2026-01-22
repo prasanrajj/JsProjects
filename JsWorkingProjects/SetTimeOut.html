@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+
+<body>
+    <button id="btn">Start</button>
+    <p id="output"></p>
+
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("output").innerText = "Waiting...";
+
+            setTimeout(function () {//executed after 2 seconds
+                document.getElementById("output").innerText = "Done ✅";
+            }, 2000);
+
+            document.getElementById("output").innerText = "Waiting...!";//executed immediately
+        };
+    </script>
+
+
+</body>
+
+</html>
