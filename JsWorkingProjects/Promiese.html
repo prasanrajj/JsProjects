@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Start</button>
+    <p id="output"></p>
+
+    <script>
+        function waitTwoSeconds() {
+            return new Promise(function (resolve) {
+                setTimeout(function () {
+                    resolve("Done ✅");
+                }, 2000);
+            });
+        }
+
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("output").innerText = "Waiting...";
+
+
+            waitTwoSeconds().then(function (message) {
+                document.getElementById("output").innerText = message;
+            });
+        };
+    </script>
+
+</body>
+
+</html>
